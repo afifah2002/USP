@@ -100,3 +100,19 @@ bmsce@DESKTOP-LSN1E53:~$ sh pattern3.sh hello emp.lst
 pattern hello not found in file emp.lst
 bmsce@DESKTOP-LSN1E53:~$ sh pattern3.sh hello emp.lst
 pattern hello not found in file emp.lst
+
+#!/bin/bash
+#program to see whether a year is leap year or not
+echo "enter the year"
+read y
+if [ $((y % 4)) -eq 0 ]
+then
+echo "$y is a leap year"
+else
+echo "it is not a leap year!!!"
+fi
+afifah@AfifahXPS:~$ nano leap.sh
+afifah@AfifahXPS:~$ sh leap.sh
+enter the year
+2020
+2020 is a leap year
