@@ -35,18 +35,18 @@ enter the basic salary of the person :
 the gross salary is : 13000
 
 #!/bin/bash
-#fahrenehit to celsius
+#program to convert temperature in fahrenheit to celsius
 echo "enter the temperature in fahrenheit : "
 read f
-#c=`expr($f - 32) \* (5 / 9)`
-c=$(echo "($f -32) * (5/9)"|bc)
-echo "the temperature in degree celsius is : $c "
+temp=$(($f - 32))
+c=$(($temp * 5/9))
+echo "the temperature in celsius : $c"
 
 
-afifah@AfifahXPS:~$ sh temp.sh
+bmsce@DESKTOP-LSN1E53:~$ sh temp.sh
 enter the temperature in fahrenheit :
-32
-the temperature in degree celsius is : 0
+212
+the temperature in celsius : 100
 
 
 #!/bin/bash
