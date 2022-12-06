@@ -163,3 +163,21 @@ enter your option
 1. print numbers from 1-5
 2.print numbers from 5-10
 3
+
+
+
+#!/bin/bash
+answer='y'
+while [ "$answer" = "y" ]
+do
+echo "enter the code and description "
+read code;read des
+echo "$code | $des"
+echo "$enter anymore? (y/n) :"
+read anymore
+case $anymore in
+y*|Y*)answer='y';;
+n*|N*)exit;;
+*)answer='y';;
+esac
+done
