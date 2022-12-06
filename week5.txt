@@ -144,3 +144,58 @@ enter the start limit :
 4
 the sum is : 28
 
+
+                                                                                                   print.sh                                                                                                                 #!/bin/bash
+echo "enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10"
+read choice
+case $choice in
+1)i=1
+echo "the printed list is : "
+while [ $i -le 5 ]
+do
+        echo "$i"
+        i=`expr $i + 1`
+done;;
+2)i=5
+echo "the printed list is : "
+while [ $i -le 10 ]
+do
+        echo "$i"
+        i=`expr $i + 1`
+done;;
+*)exit;;
+esac
+
+
+bmsce@DESKTOP-LSN1E53:~$ sh print.sh
+enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10
+1
+the printed list is :
+1
+2
+3
+4
+5
+bmsce@DESKTOP-LSN1E53:~$ nano print.sh
+bmsce@DESKTOP-LSN1E53:~$ sh print.sh
+enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10
+2
+the printed list is :
+5
+6
+7
+8
+9
+10
+bmsce@DESKTOP-LSN1E53:~$ nano print.sh
+bmsce@DESKTOP-LSN1E53:~$ sh print.sh
+enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10
+3
