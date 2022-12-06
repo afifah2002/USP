@@ -173,7 +173,7 @@ do
 echo "enter the code and description "
 read code;read des
 echo "$code | $des"
-echo "$enter anymore? (y/n) :"
+echo "enter anymore? (y/n) :"
 read anymore
 case $anymore in
 y*|Y*)answer='y';;
@@ -181,3 +181,18 @@ n*|N*)exit;;
 *)answer='y';;
 esac
 done
+
+
+bmsce@DESKTOP-LSN1E53:~$ sh des.sh
+enter the code and description
+code
+description
+code | description
+enter anymore? (y/n) :
+y
+enter the code and description
+c
+d
+c | d
+enter anymore? (y/n) :
+n
