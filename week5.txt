@@ -1,0 +1,84 @@
+#!/bin/bash
+#program to find factorial
+echo "enter the number : "
+read n
+fact=1
+i=1
+while [ $i -le $n ]
+do
+        fact=`expr $i \* $fact`
+        i=`expr $i + 1`
+done
+echo "the factorial of $n is : $fact"
+
+afifah@AfifahXPS:~$ sh factorial.sh
+enter the number :
+5
+the factorial of 5 is : 120
+
+
+
+
+
+#!/bin/bash
+#program to find gross salary
+echo "enter the basic salary of the person : "
+read b
+da=`expr $b \* 10 / 100`
+hr=`expr $b \* 20 / 100`
+gr=`expr $b + $da + $hr`
+echo "the gross salary is : $gr "
+
+afifah@AfifahXPS:~$ sh salary.sh
+enter the basic salary of the person :
+10000
+the gross salary is : 13000
+
+#!/bin/bash
+#fahrenehit to celsius
+echo "enter the temperature in fahrenheit : "
+read f
+#c=`expr($f - 32) \* (5 / 9)`
+c=$(echo "($f -32) * (5/9)"|bc)
+echo "the temperature in degree celsius is : $c "
+
+
+afifah@AfifahXPS:~$ sh temp.sh
+enter the temperature in fahrenheit :
+32
+the temperature in degree celsius is : 0
+
+
+#!/bin/bash
+echo "enter the first number : "
+read num1
+echo "enter the second number : "
+read num2
+echo "choose the arithmetic operation :
+1. addition
+2. subtraction
+3. multiplication
+4. division
+5. quit"
+read choice
+case $choice in
+1)echo "the sum is `expr $num1 + $num2`";;
+2)echo "the difference is `expr $num1 - $num2`";;
+3)echo "the product is `expr $num1 \* $num2`";;
+4)echo "the quotient is `expr $num1 / $num2`";;
+5)exit;;
+esac
+
+afifah@AfifahXPS:~$ sh arithmetic.sh
+enter the first number :
+5
+enter the second number :
+5
+choose the arithmetic operation :
+1. addition
+2. subtraction
+3. multiplication
+4. division
+5. quit
+4
+the quotient is 1
