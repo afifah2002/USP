@@ -82,3 +82,26 @@ choose the arithmetic operation :
 5. quit
 4
 the quotient is 1
+
+
+#!/bin/bash
+#to find sum of even natural numbers till n
+echo "enter the limit n : "
+read n
+echo "enter the start limit : "
+read i
+sum=0
+while [ $i -le $n ]
+do
+        sum=`expr $i + $sum`
+        i=`expr $i + 2`
+done
+echo "the sum is : $sum"
+
+bmsce@DESKTOP-LSN1E53:~$ sh even.sh
+enter the limit n :
+10
+enter the start limit :
+4
+the sum is : 28
+
