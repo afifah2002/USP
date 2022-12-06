@@ -34,6 +34,45 @@ enter the basic salary of the person :
 10000
 the gross salary is : 13000
 
+
+
+
+
+
+
+
+bmsce@DESKTOP-LSN1E53:~$ sh print.sh
+enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10
+1
+the printed list is :
+1
+2
+3
+4
+5
+bmsce@DESKTOP-LSN1E53:~$ nano print.sh
+bmsce@DESKTOP-LSN1E53:~$ sh print.sh
+enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10
+2
+the printed list is :
+5
+6
+7
+8
+9
+10
+bmsce@DESKTOP-LSN1E53:~$ nano print.sh
+bmsce@DESKTOP-LSN1E53:~$ sh print.sh
+enter your option
+1. print numbers from 1-5
+2.print numbers from 5-10
+3
+bmsce@DESKTOP-LSN1E53:~$
+
 #!/bin/bash
 #program to convert temperature in fahrenheit to celsius
 echo "enter the temperature in fahrenheit : "
