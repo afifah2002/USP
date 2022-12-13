@@ -112,3 +112,31 @@ given two numbers are
 m= 2 and n=8
 GCD=2
 LCM=8
+
+
+
+#!/bin/bash
+#sum of n natural numbers
+echo "enter the limit : "
+read l
+sum=0
+while [ $l -gt 0 ]
+do
+sum=`expr $sum + $l`
+l=`expr $l - 1`
+done
+echo $sum
+
+
+afifah@AfifahXPS:~$ sh sum.sh
+enter the limit :
+1
+1
+afifah@AfifahXPS:~$ sh sum.sh
+enter the limit :
+0
+0
+afifah@AfifahXPS:~$ sh sum.sh
+enter the limit :
+6
+21
