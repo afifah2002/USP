@@ -74,3 +74,41 @@ Fibonacci Series
 1
 2
 3
+
+
+#!/bin/sh
+#gcd lcm
+echo "Enter the number"
+read n
+a=0
+b=1
+count=2
+echo "Fibonacci Series"
+if [ $n -eq 1 ]
+then
+echo $a
+elif [ $n -eq 2 ]
+then
+echo "$a $b"
+else
+echo $a
+echo $b
+while [ $count -lt $n ]
+do
+fib=`expr $a + $b`
+a=$b
+b=$fib
+echo $fib
+count=`expr $count + 1`
+done
+fi
+
+afifah@AfifahXPS:~$ nano gcdlcm.sh
+afifah@AfifahXPS:~$ sh gcdlcm.sh
+Enter two integers
+2 8
+ To find GCD and LCM
+given two numbers are
+m= 2 and n=8
+GCD=2
+LCM=8
