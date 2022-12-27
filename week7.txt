@@ -47,7 +47,7 @@ echo "the avearge of the student is $av"
 if [ $av -gt 90 ]
 then
 echo "$name with student id $snum has passed with distinction";exit
-elif [ "$av" -gt 60.00 ] && [ "$av" -lt 90.00 ]
+elif [ $av -gt 60 ] && [ $av -lt 90 ]
 then
 echo "$name with student id $snum has passed with first class ";exit
 else
@@ -92,6 +92,7 @@ echo "length of the string is $len"
 while [ $len -gt 0 ]
 do
 ch=$(echo "$str" | cut -c $len)
+
 case $ch in
 [aAeEiIoOuU])echo $ch
                      count=`expr $count + 1`;;
@@ -112,3 +113,19 @@ i
 e
 a
 the number of vowels in the string aeiou is/are : 5
+
+
+#!/bin/bash
+
+echo "enter string"
+read string
+
+count=0
+C  
+for ((i=0; i<${  #string}; i++)); do
+        char=${string:$i:1}
+        if [ $char = 'a' -o  $char = 'e' -o $char = 'i' -o $char = 'o' -o $char = 'u' ]
+        then
+                count=`expr $count + 1`
+        fi
+done
