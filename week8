@@ -91,3 +91,30 @@ usage: pat.sh file pattern(s)
 bmsce@DESKTOP-LSN1E53:~$ sh pat.sh emp.lst afifah vibha
 1     afifah     cse      10000
 2     vibha      IS       20000
+
+#!/bin/bash
+#code and description and redirecting to another file
+answer=y
+while [ "$answer" = "y" ]
+do
+echo "enter the code and description : "
+read code description
+echo "$code | $description ">>newlist
+echo "enter anymore (y/n)?  "/dev/tty
+read anymore
+case $anymore in
+y*|Y*)answer=y;;
+n*|N*)answer=n;;
+*)answer=y;;
+esac
+done
+
+output -
+bmsce@DESKTOP-LSN1E53:~$ sh cd.sh
+enter the code and description :
+hello hello
+enter anymore (y/n)?  /dev/tty
+n
+
+bmsce@DESKTOP-LSN1E53:~$ cat newlist
+hello | hello
