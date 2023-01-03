@@ -68,3 +68,26 @@ enter the department code :
 invalid code
 enter the department code :
 ^C
+
+
+#!/bin/bash
+#to find a series of given patterns in a file using shift command
+case $# in
+0|1)echo "usage: $0 file pattern(s)";exit 2;;
+*)flname=$1
+shift
+for pattern in "$@";do
+grep "$pattern" $flname || echo "pattern $pattern not found "
+done;;
+esac
+
+
+output-
+bmsce@DESKTOP-LSN1E53:~$ sh pat.sh emp.lst afifah
+1     afifah     cse      10000
+bmsce@DESKTOP-LSN1E53:~$ nano pat.sh
+bmsce@DESKTOP-LSN1E53:~$ sh pat.sh
+usage: pat.sh file pattern(s)
+bmsce@DESKTOP-LSN1E53:~$ sh pat.sh emp.lst afifah vibha
+1     afifah     cse      10000
+2     vibha      IS       20000
