@@ -1,4 +1,5 @@
 #!/bin/bash
+#to count the number of words lines and characters in a file 
 echo "enter the filename : "
 read fname
 if [ -f "$fname" ]
@@ -26,3 +27,44 @@ number of words :
 16 emp.lst
 number of characters :
 128 emp.lst
+
+
+#!/bin/bash
+#validating dept code and redirecting the output using a here document
+IFS="|"
+while
+echo "enter the department code : "
+do
+read dcode
+set -- `grep "^$dcode"<<limit
+01|accounts|6213
+02|admin|5423
+03|marketing|6521
+04|personnel|2365
+05|production|9876
+06|sales|1006
+limit`
+case $# in
+3) echo "dept name : $2 \nemp-id of the head of the dept : $3 \n"
+shift 3;;
+*) echo "invalid code";continue
+esac
+done
+
+output-
+bmsce@DESKTOP-LSN1E53:~$ sh validtae.sh
+enter the department code :
+01
+dept name : accounts
+emp-id of the head of the dept : 6213
+
+enter the department code :
+02
+dept name : admin
+emp-id of the head of the dept : 5423
+
+enter the department code :
+00
+invalid code
+enter the department code :
+^C
