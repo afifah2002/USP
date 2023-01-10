@@ -104,3 +104,15 @@ bmsce@DESKTOP-LSN1E53:~$ ls -l file1
 bmsce@DESKTOP-LSN1E53:~$ chmod 666 file1
 bmsce@DESKTOP-LSN1E53:~$ ls -l file1
 -rw-rw-rw- 1 bmsce bmsce 0 Jan 10 12:01 file1
+
+
+
+#change file permission
+bmsce@DESKTOP-LSN1E53:~$ cat > workfile.txt
+^C
+bmsce@DESKTOP-LSN1E53:~$ chmod 000 workfile.txt
+bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
+---------- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+bmsce@DESKTOP-LSN1E53:~$ chmod u+x,g+rw,o+rwx workfile.txt
+bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
+---xrw-rwx 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
