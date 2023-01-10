@@ -127,3 +127,13 @@ bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
 bmsce@DESKTOP-LSN1E53:~$ chmod 000 workfile.txt
 bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
 ---------- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+
+
+
+bmsce@DESKTOP-LSN1E53:~$ cat > file3
+^C
+bmsce@DESKTOP-LSN1E53:~$ ls -l file3
+-rw-r--r-- 1 bmsce bmsce 0 Jan 10 12:24 file3
+bmsce@DESKTOP-LSN1E53:~$ chmod 114 file3
+bmsce@DESKTOP-LSN1E53:~$ ls -l file3
+---x--xr-- 1 bmsce bmsce 0 Jan 10 12:24 file3
