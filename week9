@@ -174,3 +174,12 @@ bmsce@DESKTOP-LSN1E53:~$ ls -i
  24769797951331897 arithmetic.sh       10696049115802200 displaydate.shy   12103423999645832 file            13792273858834987 list      37717646880025906 pattern3.sh     9288674232245874 temp.sh
   9007199254745304 biggest.sh           6755399441853752 emp.lst           10414574138978748 file.sh          5629499535018299 name.sh    5910974511721826 pattern4.sh     1688849860451997 typescript
   6192449488773385 cd.sh                2533274791482458 end               10696049115812354 file1            2533274791534858 newlist    3377699720897791 polarity.sh    18858823439615227 usp
+
+
+
+#symbollic links
+bmsce@DESKTOP-LSN1E53:~$ cat > foo
+^C
+bmsce@DESKTOP-LSN1E53:~$ ln -s foo foo.txt
+bmsce@DESKTOP-LSN1E53:~$ ls -l foo.txt
+lrwxrwxrwx 1 bmsce bmsce 3 Jan 10 12:54 foo.txt -> foo
