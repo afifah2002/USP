@@ -158,3 +158,19 @@ bmsce@DESKTOP-LSN1E53:~$ sh file.sh
 -rwx--x--x 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
 -r-x-w---- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
 -rwxrwxrw- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+
+
+
+#list files iwth hardlinks
+bmsce@DESKTOP-LSN1E53:~$ ls -l file5
+-----w--w- 1 bmsce bmsce 0 Jan 10 12:45 file5
+bmsce@DESKTOP-LSN1E53:~$ ls -i
+  8162774324978900 0]                   1688849861402764 count.sh          10414574139100549 even.sh          1970324838065868 file2      5629499535344601 passclass.sh    5629499534577048 power.sh        6192449488773345 validtae.sh
+  1970324838068669 60                   4503599628279203 des.sh            16607023626024938 ex.sh            3940649675040523 file3      1970324838082473 pat.sh          6473924465152303 print.sh        2814749768237942 vowel.sh
+ 12103423998855363 90                  12384898976407820 desig.lst         15762598695871457 ex2.sh         112027040730844902 file4     10133099161589937 patt.sh        19421773393399367 rudi.sh.save    3377699721619196 workfile.txt
+   562949953444130 Jahnavi_USP          1688849860452025 dir1               3940649674435839 exitstatus.sh    8162774325695605 file5     10696049115018438 pattern.sh     11258999068555054 sal.sh
+  4785074604448743 area.sh              2533274790748236 direc1             9288674232217051 fact.sh         12384898976066908 foo       28428972648011605 pattern1.sh     6755399441853747 sample.sh
+  2251799813700098 area_of_circle.sh    5910974511721789 displaydate.sh    13510798882440088 fib.sh           7036874418564446 leap.sh   12384898976066876 pattern2.sh    16325548650024330 start
+ 24769797951331897 arithmetic.sh       10696049115802200 displaydate.shy   12103423999645832 file            13792273858834987 list      37717646880025906 pattern3.sh     9288674232245874 temp.sh
+  9007199254745304 biggest.sh           6755399441853752 emp.lst           10414574138978748 file.sh          5629499535018299 name.sh    5910974511721826 pattern4.sh     1688849860451997 typescript
+  6192449488773385 cd.sh                2533274791482458 end               10696049115812354 file1            2533274791534858 newlist    3377699720897791 polarity.sh    18858823439615227 usp
