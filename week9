@@ -64,3 +64,14 @@ drwxr-xr-x 1 bmsce bmsce  4096 Nov  8 12:35 usp
 bmsce@DESKTOP-LSN1E53:~$ ls -ld
 drwxr-xr-x 1 bmsce bmsce 4096 Jan  3 12:49 .
 
+
+#to give user all permissions and group and others read and execute
+
+bmsce@DESKTOP-LSN1E53:~$ chmod a-rwx end
+bmsce@DESKTOP-LSN1E53:~$ ls -l end
+---------- 1 bmsce bmsce 0 Jan 10 11:45 end
+
+
+bmsce@DESKTOP-LSN1E53:~$ chmod u+rwx,go+rx end
+bmsce@DESKTOP-LSN1E53:~$ ls -l end
+-rwxr-xr-x 1 bmsce bmsce 0 Jan 10 11:45 end
