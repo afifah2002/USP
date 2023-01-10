@@ -137,3 +137,24 @@ bmsce@DESKTOP-LSN1E53:~$ ls -l file3
 bmsce@DESKTOP-LSN1E53:~$ chmod 114 file3
 bmsce@DESKTOP-LSN1E53:~$ ls -l file3
 ---x--xr-- 1 bmsce bmsce 0 Jan 10 12:24 file3
+
+
+
+#write a shell script to assign the following commands
+bmsce@DESKTOP-LSN1E53:~$ nano file.sh
+
+#!/bin/sh
+ls -l workfile.txt
+chmod 711 workfile.txt
+ls -l workfile.txt
+chmod 520 workfile.txt
+ls -l workfile.txt
+chmod 776 workfile.txt
+ls -l workfile.txt
+
+
+bmsce@DESKTOP-LSN1E53:~$ sh file.sh
+---------- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+-rwx--x--x 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+-r-x-w---- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+-rwxrwxrw- 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
