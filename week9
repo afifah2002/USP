@@ -33,6 +33,14 @@ drwxr-xr-x 1 bmsce bmsce  4096 Nov 15 12:33 direc1
 -rwxr-xr-x 1 bmsce bmsce  1037 Dec 27 11:59 passclass.sh
 -rw-r--r-- 1 bmsce bmsce   250 Jan  3 12:20 pat.sh
 -rw-r--r-- 1 bmsce bmsce    99 Dec 13 11:21 patt.sh
+
+
+#to give execution permission to all in file start
+bmsce@DESKTOP-LSN1E53:~$ cat > start
+hello ^C
+bmsce@DESKTOP-LSN1E53:~$ chmod a+x start
+bmsce@DESKTOP-LSN1E53:~$ ls -l start
+-rwxr-xr-x 1 bmsce bmsce 0 Jan 10 11:38 start
 -rwxr-xr-x 1 bmsce bmsce   367 Dec 27 12:44 pattern.sh
 -rw-r--r-- 1 bmsce bmsce   265 Nov 22 11:50 pattern1.sh
 -rwxr-xr-x 1 bmsce bmsce   231 Nov 22 12:14 pattern2.sh
