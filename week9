@@ -75,3 +75,18 @@ bmsce@DESKTOP-LSN1E53:~$ ls -l end
 bmsce@DESKTOP-LSN1E53:~$ chmod u+rwx,go+rx end
 bmsce@DESKTOP-LSN1E53:~$ ls -l end
 -rwxr-xr-x 1 bmsce bmsce 0 Jan 10 11:45 end
+
+
+#to remove excute permission from alla nd assign read and write permission to other two 
+bmsce@DESKTOP-LSN1E53:~$ cat > file
+^C
+bmsce@DESKTOP-LSN1E53:~$ chmod a-rwx file
+bmsce@DESKTOP-LSN1E53:~$ ls -l file
+---------- 1 bmsce bmsce 0 Jan 10 11:54 file
+bmsce@DESKTOP-LSN1E53:~$ rm file
+rm: remove write-protected regular empty file 'file'? y
+bmsce@DESKTOP-LSN1E53:~$ cat > file
+^C
+bmsce@DESKTOP-LSN1E53:~$ chmod a-x,go+rw file
+bmsce@DESKTOP-LSN1E53:~$ ls -l file
+-rw-rw-rw- 1 bmsce bmsce 0 Jan 10 11:55 file
