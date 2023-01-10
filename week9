@@ -90,3 +90,17 @@ bmsce@DESKTOP-LSN1E53:~$ cat > file
 bmsce@DESKTOP-LSN1E53:~$ chmod a-x,go+rw file
 bmsce@DESKTOP-LSN1E53:~$ ls -l file
 -rw-rw-rw- 1 bmsce bmsce 0 Jan 10 11:55 file
+
+
+
+
+#assign using absolute permission only read and write to a file
+
+bmsce@DESKTOP-LSN1E53:~$ cat > file1
+^C
+bmsce@DESKTOP-LSN1E53:~$ chmod 000 file1
+bmsce@DESKTOP-LSN1E53:~$ ls -l file1
+---------- 1 bmsce bmsce 0 Jan 10 12:01 file1
+bmsce@DESKTOP-LSN1E53:~$ chmod 666 file1
+bmsce@DESKTOP-LSN1E53:~$ ls -l file1
+-rw-rw-rw- 1 bmsce bmsce 0 Jan 10 12:01 file1
