@@ -116,3 +116,9 @@ bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
 bmsce@DESKTOP-LSN1E53:~$ chmod u+x,g+rw,o+rwx workfile.txt
 bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
 ---xrw-rwx 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
+
+
+bmsce@DESKTOP-LSN1E53:~$ chmod 000 workfile.txt
+bmsce@DESKTOP-LSN1E53:~$ chmod u+rwx,o+rx workfile.txt
+bmsce@DESKTOP-LSN1E53:~$ ls -l workfile.txt
+-rwx---r-x 1 bmsce bmsce 0 Jan 10 12:14 workfile.txt
